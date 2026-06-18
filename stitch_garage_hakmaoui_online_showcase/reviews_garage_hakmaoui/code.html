@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Customer Reviews - Garage Hakmaoui</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#44474b",
+                        "on-tertiary-container": "#e45400",
+                        "secondary-fixed-dim": "#c4c6cc",
+                        "background": "#f8f9fa",
+                        "on-surface-variant": "#44474a",
+                        "surface-container": "#edeeef",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c5c6ca",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#370e00",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1a1c1e",
+                        "on-primary-container": "#838486",
+                        "on-tertiary-fixed": "#370e00",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-container": "#616569",
+                        "surface-variant": "#e1e3e4",
+                        "surface-dim": "#d9dadb",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "error": "#ba1a1a",
+                        "primary": "#000101",
+                        "secondary": "#5b5f63",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#5d5e61",
+                        "on-primary-fixed-variant": "#454749",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e0e2e8",
+                        "inverse-primary": "#c6c6c9",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed-variant": "#7f2b00",
+                        "primary-fixed-dim": "#c6c6c9",
+                        "on-primary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "on-primary-fixed": "#1a1c1e",
+                        "on-secondary-fixed": "#181c20",
+                        "secondary-container": "#e0e2e8",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "outline": "#75777a",
+                        "on-background": "#191c1d",
+                        "primary-fixed": "#e2e2e5",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-surface": "#2e3132",
+                        "brand-orange": "#f97316" // Adding safety orange
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "button": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, #E9ECEF 1px, transparent 1px), linear-gradient(to bottom, #E9ECEF 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-brand-orange selection:text-white">
+<!-- TopNavBar -->
+<header class="bg-surface fixed top-0 w-full border-b border-outline-variant z-50">
+<div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-20">
+<div class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-sm">
+<img alt="Garage Hakmaoui Logo" class="h-10 w-10" src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+                Garage Hakmaoui
+            </div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="text-on-surface-variant font-button text-button hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant font-button text-button hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Services</a>
+<a class="text-tertiary-fixed-dim font-bold border-b-2 border-tertiary-fixed-dim pb-1 font-button text-button hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Reviews</a>
+<a class="text-on-surface-variant font-button text-button hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Contact</a>
+</nav>
+<button class="hidden md:flex bg-brand-orange text-white px-md py-sm rounded font-button text-button hover:bg-opacity-90 transition-all active:opacity-80 active:scale-95">
+                Book Appointment
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-32 pb-xl min-h-screen bg-grid-pattern relative">
+<div class="absolute inset-0 bg-gradient-to-b from-surface to-transparent h-64 pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-gutter relative z-10">
+<!-- Hero Section -->
+<div class="text-center mb-xl">
+<h1 class="font-headline-xl text-headline-xl text-primary mb-md">Client Testimonials</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Real feedback from our customers in Mohammedia. We pride ourselves on technical excellence and transparent communication.
+                </p>
+<div class="mt-lg flex justify-center gap-md items-center">
+<div class="flex text-brand-orange">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant">4.9 AVERAGE RATING</span>
+</div>
+</div>
+<!-- Bento Grid for Reviews -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-md auto-rows-min">
+<!-- Review 1: Featured (Spans 8 cols) -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant p-lg hover:border-outline transition-colors group">
+<div class="flex justify-between items-start mb-md">
+<div>
+<div class="flex text-brand-orange mb-xs">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary">Exceptional Diagnostic Skills</h3>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container px-sm py-xs border border-outline-variant">VERIFIED REPAIR</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg italic">
+                        "Best garage in Mohammedia. Honest and professional. My car had a complex electrical issue that two other shops couldn't figure out. The team at Hakmaoui diagnosed it within an hour and provided a clear, itemized quote before starting work."
+                    </p>
+<div class="flex items-center gap-sm">
+<div class="w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-primary font-bold">AK</div>
+<div>
+<p class="font-button text-button text-primary">Ahmed K.</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-xs">Volkswagen Golf V</p>
+</div>
+</div>
+</div>
+<!-- Review 2: Compact (Spans 4 cols) -->
+<div class="md:col-span-4 bg-surface-container-lowest border border-outline-variant p-md hover:border-outline transition-colors">
+<div class="flex text-brand-orange mb-sm">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        "Fast, efficient, and reasonably priced. Brought my car in for routine maintenance and brakes. They didn't try to upsell me on unnecessary parts. Highly recommended."
+                    </p>
+<div class="mt-auto border-t border-outline-variant pt-sm">
+<p class="font-button text-button text-primary">Sara E.</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Toyota Yaris</p>
+</div>
+</div>
+<!-- Review 3: Compact (Spans 4 cols) -->
+<div class="md:col-span-4 bg-surface-container-lowest border border-outline-variant p-md hover:border-outline transition-colors">
+<div class="flex text-brand-orange mb-sm">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">
+                        "The transparency here is unmatched. They showed me exactly what was wrong with the suspension and explained the repair process step-by-step."
+                    </p>
+<div class="mt-auto border-t border-outline-variant pt-sm">
+<p class="font-button text-button text-primary">Youssef M.</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Renault Clio</p>
+</div>
+</div>
+<!-- Review 4: Medium (Spans 8 cols) -->
+<div class="md:col-span-8 bg-surface-container-lowest border border-outline-variant p-md hover:border-outline transition-colors flex flex-col md:flex-row gap-lg">
+<div class="flex-1">
+<div class="flex text-brand-orange mb-sm">
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+<span class="material-symbols-outlined" data-weight="fill">star</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Lifesavers in an Emergency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            "My car broke down just outside Mohammedia. Garage Hakmaoui arranged a tow, received the car late in the afternoon, and had it running by the next morning. The mechanic even stayed a bit late to ensure everything was perfect. Incredible dedication to their craft."
+                        </p>
+</div>
+<div class="md:w-48 border-l-0 md:border-l border-t md:border-t-0 border-outline-variant pt-md md:pt-0 md:pl-md flex flex-col justify-center">
+<p class="font-button text-button text-primary mb-xs">Fatima B.</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-sm">Peugeot 208</p>
+<div class="flex items-center gap-xs text-brand-orange">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="font-label-caps text-label-caps">VERIFIED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Call to Action -->
+<div class="mt-xl text-center bg-surface-container border border-outline-variant p-xl">
+<span class="material-symbols-outlined text-4xl text-primary mb-md block">rate_review</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Share Your Experience</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg max-w-xl mx-auto">
+                    Your feedback helps us maintain our high standards of technical precision and customer service. Let us know how we did.
+                </p>
+<button class="bg-primary text-white border border-primary px-lg py-sm font-button text-button hover:bg-transparent hover:text-primary transition-colors inline-flex items-center gap-sm">
+                    Leave a Review
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-xl bg-primary-container border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center py-lg px-gutter max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md text-surface-container-lowest mb-md md:mb-0">
+                Garage Hakmaoui
+            </div>
+<div class="text-on-primary-container font-body-md text-body-md text-center md:text-left mb-md md:mb-0">
+                © 2024 Garage Hakmaoui. Professional Automotive Services in Mohammedia.
+            </div>
+<nav class="flex gap-md font-label-caps text-label-caps">
+<a class="text-on-primary-container hover:text-surface-bright transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary-container hover:text-surface-bright transition-colors" href="#">Terms of Service</a>
+<a class="text-on-primary-container hover:text-surface-bright transition-colors" href="#">Service Status</a>
+</nav>
+</div>
+</footer>
+</body></html>
