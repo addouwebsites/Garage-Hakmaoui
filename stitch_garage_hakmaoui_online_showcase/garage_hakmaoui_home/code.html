@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Garage Hakmaoui - Professional Automotive Services</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#44474b",
+                        "on-tertiary-container": "#e45400",
+                        "secondary-fixed-dim": "#c4c6cc",
+                        "background": "#f8f9fa",
+                        "on-surface-variant": "#44474a",
+                        "surface-container": "#edeeef",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c5c6ca",
+                        "inverse-on-surface": "#f0f1f2",
+                        "tertiary-container": "#370e00",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#1a1c1e",
+                        "on-primary-container": "#838486",
+                        "on-tertiary-fixed": "#370e00",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-container": "#616569",
+                        "surface-variant": "#e1e3e4",
+                        "surface-dim": "#d9dadb",
+                        "tertiary-fixed-dim": "#ffb599",
+                        "error": "#ba1a1a",
+                        "primary": "#000101",
+                        "secondary": "#5b5f63",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#5d5e61",
+                        "on-primary-fixed-variant": "#454749",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e0e2e8",
+                        "inverse-primary": "#c6c6c9",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed-variant": "#7f2b00",
+                        "primary-fixed-dim": "#c6c6c9",
+                        "on-primary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "on-primary-fixed": "#1a1c1e",
+                        "on-secondary-fixed": "#181c20",
+                        "secondary-container": "#e0e2e8",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "outline": "#75777a",
+                        "on-background": "#191c1d",
+                        "primary-fixed": "#e2e2e5",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#f8f9fa",
+                        "surface-container-high": "#e7e8e9",
+                        "inverse-surface": "#2e3132"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "xl": "80px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Inter"],
+                        "button": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                        "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom styles for subtle effects not fully covered by Tailwind utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md selection:bg-tertiary-fixed-dim selection:text-tertiary-container">
+<!-- Shared Component: TopNavBar -->
+<header class="bg-surface dark:bg-surface fixed top-0 w-full z-50 border-b border-outline-variant dark:border-outline">
+<div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-20">
+<!-- Brand Logo Area -->
+<div class="flex items-center gap-sm">
+<img alt="Garage Hakmaoui Logo" class="h-8 w-auto" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAAQAElEQVR4AezdbYxc1XnA8XPGBr+HOLUUz+7aCIp5KQhEo4a2aQXtx1ZVE5oPsdNPfQHSqLwkkdoKU6nCqFWVCgeqFpCifqiKaaUkNG2lSv0SKuVDolaUJAQCJDS7szsgbQQJ9q7X9s7Jc3Zt7+7szM7MnXPvOc+5/9WOmblz7znP+T337uO9fjJpGL4QQAABBBAoIEABKYDGIQgggAACxlBAOAsQiCXAvAgoF6CAKE8g4SOAAAKxBCggseSZFwEEEFAuoLiAKJcnfAQQQEC5AAVEeQIJHwEEEIglQAGJJc+8CCgWIHQEvAAFxCvwQAABBBAYWYACMjIZByCAAAIIeAEKiFeo+sF8CCCAQAYCFJAMksgSEEAAgRgCFJAY6syJAAKxBJg3oAAFJCAmQyGAAAJ1EqCA1CnbrBUBBBAIKEABCYhZh6FYIwIIIHBJgAJySYL/IoAAAgiMJEABGYmLnRFAAIFYAunNSwFJLydEhAACCKgQoICoSBNBIoAAAukJUEDSywkRlSPAqAggEFiAAhIYlOEQQACBughQQOqSadaJAAIIBBYYuoAEnpfhEEAAAQSUC1BAlCeQ8BFAAIFYAhSQWPLMi8DQAuyIQJoCFJA080JUCCCAQPICFJDkU0SACCCAQJoCdSggacoTFQIIIKBcgAKiPIGEjwACCMQSoIDEkmdeBOogwBqzFqCAZJ1eFocAAgiUJ0ABKc+WkRFAAIGsBSggSaeX4BBAAIF0BSgg6eaGyBBAAIGkBSggSaeH4BBAIJYA8w4WoIAMNmIPBBBAAIEeAhSQHihsQgABBBAYLEABGWzEHkUEOAYBBLIXoIBkn2IWiAACCJQjQAEpx5VREUAAgVgClc1LAamMmokQQACBvAQoIHnlk9UggAAClQlQQCqjZiItAsSJAALDCVBAhnNiLwQQQACBLgEKSBcILxFAAAEEhhMIX0CGm5e9EEAAAQSUC1BAlCeQ8MsT+OAHD93iH+XNwMgI6BaggOjOH9EHFHi/fDUnpv6yOXn4lYmpw27bFfbb/uGfy7bvNicPPSq7vD/glKGHYjwEKhWggFTKzWQpCviiMDF56PO79uybtY3Gn1prbuyOU7bdZK09vmvP+6alkJzwx3Tvw2sE6iZAAalbxlnveoGG/GZxrxSO1421n5UCsXv9m72eW2v2WWsf9sfIsffIPlYefCNQSwEKyLq087Q+Agenpj7cnDr0LWvNU9baA6Ou3B9jrXlafnN50Y816vHsj0AOAhSQHLLIGoYWOHDg6qb80D/VMI1vWGNvHvrAfjtae5sfS4rRs37sfruxHYEcBSggOWaVNfUS2CH/dnH8ih2dN+R21Sd67TDONilGR2Xs12WOh2WcHfLgeyQBdtYoQAHRmDViHkmg2Zz6WHPq8CvW2kflMfDfOUYafN3OMvYeeZzwc/k5173FUwSyFKCAZJlWFuUFJiYmbpBbS1+z2xpftsZc47dV8fBz+Tn93D6GKuZkDgRiCFBAYqiHn5MR1wns37//qubE4S84u+071tg7171V6VM/t4/Bx+JjqnRyJkOgAgEKSAXITFGZgG/LvWfn7r1v2Ia5X24nba9s5j4T+Rh8LD4m2n77ILFZrQAFRG3qCHy9wMG1ttyn5Yf2yG2568cq47mPydL2WwZt/DFrHAEFpMbJz2HpvnVW/q3hWd9KK7eMxm/LLRvF0vZbNjHjVydAAanOmpnCClxuy5XCcTTs0OWP5mOm7bd8Z2YoV4ACUq4vow8UGH0H3yLbrKAtd/TIRjvCWkvb72hk7J2YAAUksYQQTn8B3xIrt6sqb8vtH1GYd6wx19D2G8aSUaoVoIBU681sBQR8C6xvhfUtsTZiW26B0Ec6xK/Nr9Gv1a95pIPZGYECAuMeQgEZV5DjyxRIri23zMX6seW21nbafr0EDw0CFBANWaphjAcTb8stOyVSSA5Y2n7LZmb8MQUoIGMCcnhYAVVtuWGX3ns02n57u7A1CQEKSBJpIAgRUN2WK/GX+i3/PsKn/ZYqzOBFBCggRdQ4JqhALm25QVF6DGZp++2hwqaYAhELSMxlM3cKArm25ZZta2n7LZuY8YcUoIAMCcVu4QR8i6pvVTWN7a/ajNtyw4n1HmnFTgybk1MnvWnvvdiKQHkCFJDybBl5s8CGttzNb7OliIC1jQdG/bTfIvNwDALdAhSQbhFelyJQ97bcUlDXDSr/PkLb7zoPnlYjQAGpxrm2s/zM1NRkc+qQnk/L1Z6pDW2/hya0L4f40xaggBTJD8cMJdCcPHT8Smdfk3v16j4t1xl36txZO+EfxrnnhlpwQjt58yt2mNckBw9LWDvkwTcCwQUoIMFJGfBiW+4P5LbKo/LYrUrEuZc6pnNHuzVzbH7+h23/mJudOeq3SVF5WdNaxJ5P+9WUMIWxUkAUJi3VkDW35Trn5p0z90qxuP2tVuub3cZ+mxSVW2Wf+/y+3e+n/Nrm1fabMnXtYqOA1C7l4RfsW0h9W67/JFmrrC1XisEF1zFPnF04fV17dvoZ0XHy6PfdkX2e9vv6Y/yx/XZMcbvPjc+Rz5XPWYoxEpMuAQqIrnylFu2Gtly5ZbI9tQC3ikduSb1g3fIt7bnpB955550fb7Xv+vf8vv4Yf6wfY/17qT/3OeLTflPPkp74KCB6chUk0lCDaG7LlV8x3nTLnbvlltRdc3Nz3ytq4o/1Y/ix/JhFx4lxnBQS2n5jwGc2JwUks4SWvRzNn5Yrt5zOyON4uzV9U7vd+kooKz+WH1PGfkQeC6HGrWScDW2/VzcrmZNJshGggGSTytIXovrTcuVW06nzS40j7dmZx0RqSR6hv5dk7BMyx3VGbdtv53XafkOfFuvHy+85BSS/nAZf0cW23Ffktof6ttzgOF0D0vbbBcLLrAUoIFmnd7zF5dyWO57M4KNp+x1sxB76BSgg+nMYfAW+xdO3evqWT9/6GXyCYgMOdZT8G8QobblDjTnGTrT9joHHoekLUEDSz1GVEdayLbdsYNp+yxZm/FgCFJBY8onNS1tu+Qmh7bd8Y2YoSaDPsBSQPjB12UxbbvWZpu23enNmLEeAAlKOq4ZRacuNmyXafuP6M3sAAQpIAERtQ9CWW3XG+s9H229/G95JX4ACkn6OgkVIW24wyuAD0fYbnJQBKxCggFSAHHsK2nJjZ2Do+Wn7HZqKHVMQ0FBAUnDSGgNtuQozR9uvwqTVNGQKSKaJpy1Xf2Jp+9Wfw9xXQAHJLMO05WaWUFlO1LZfmX+sbz7tdyy+1A+mgKSeoeHjoy13eCuNe9L2qzFrmcdMAckgwbTlZpDEIZdA2++QUOxWiQAFpFTmcgenLbdc35RHp+035ezUJzYKiMJc05arMGnlhEzbbzmujDqkAAVkSKhEdqMtN5FEpBQGbb+9s8HW8gUoIOUbB5mBttwgjFkPQttv1ulNcnEUkCTTshYUbblrFjwbToC23+Gc2Gt8AQrI+IZljRC3LXfMVTnjTp1fahxpz848JkMtyYPvagVo+63Wu5azUUASTDttuQkmRWlItP0qTZySsCkgCSWKttyEkpFZKLT9qkqommApIAmkirbcBJJQjxBo+61HnitbJQWkMuqeE9GW25OFjWUK0PZbpm69xqaARMo3bbnlwTPycAK0/Q7nxF79BSgg/W1KeYe23FJYGXQMAdp+x8Cr+aEUkOpOANpyq7NmptEFaPsd3az2R2wuILUnCQ9AW254U0YsR4C233Jccx2VAlJiZmnLLRGXoUsVoO23VN5sBqeAlJBK2nJLQK3HkKmtkrbf1DKSWDwUkLAJoS03rCejJSBA228CSUg0BApIoMTQlhsIkmGSFaDtN9nURAssqwISQ5G23BjqzBlTgLbfmPppzU0BKZ4P2nKL23GkfgHafvXncOwVUEAKENKWWwCNQ7IUWGv77dzhjHtZ0yKttXvkcaI5dfgVf01rij2VWCkgI2SCttwRsNi1VgK0/dYq3ZcXSwG5TNH/yYEDB/Y1Jw/9vWlsf9Uae2f/PdN8p2PMk4tn3jvSnp1+RiJ08uAbgTIEVtp+/bnmnHuqjAnKHHPl2pZr/ODU4Sf8NV/mXLmMTQEZkEn5rePGK3fs+l/5Vfe+AbuO83Ypx8othRdM58KNb7Wm739XvkqZhEER6BKQU+3d9uzMp/y5t3IOdr2f+kv5ofjH/pr3137qscaOT6xih5Du/BMTU8fkt44XjbVH0o1yc2TOmf83HffRdmvmLt96afhCIIKAP/f8OejPRTknfxghhOJTyjXv7Lb/OTg5+fHig+R/JAWkT44nJg5/xFn7j/L2Tnmo+JbbBmfkcbw9O33j3NzMv6oImiCzF/DnopyTN8i5+Yg8FpJbcJ+A5K7DHmsazzWbh37V8NVTgALSg+UDk5NTpuG+KieQGh+5VXDq/FJD/p1j5jFZ0pI8+EYgJQGVbb/yM2Cb3WaeP3Dg6mZKmKnEouYHZJVgO03j88bYDxgNX8691DGdO+RWwTHfUqkhZGKsr4A/R+dmZ476c1b+0qOk7dd+4Iod7q/rm7X+K6eAdNlcddXh/c6Y3+nanNxLuRUwL/eV75WL8XbfQhkvQGZGYHQBf87KX3pulXP4Pn8ujz5C1Ue4T7xvakrHXyorpKGAdGHv3us+Lb+2bu/anMxLudguuI554uzC6evkvjJtuclkhkAKCKy0/fpz2Z/T/twuMEYlh/ifCXtN4w8rmUzRJBSQrmRZY3+9a1MyL+VX/hesW76lPTf9gP+E1GQCIxAExhDw57I/p/257c/xMYYq9VCJLbmfDaUueIjBKSCbkNzkpk2RN8gttTfdcudu+ZWfttzIuWD68gQutf36c92f8+XNVHjk5H42FF5JoAMpIF2QcuJOdW2K9lJ+pV9ty21N3+Q/ATVaIEyMQIUC/lxvyzkv539Sbb9yd2KiQgYVU1FAutIk9zp3d22K8lJ+XX72/JK5vj2roy33zEO7f/u9B3efOP3Q7v84/eCet1Yfu//9vYd2Pyrv/VYUxEGTZvy+mGvPx0rb7znrrvfXQiKp2p9IHMmEQQFJJhUXA1lry/3k/PzM3MWtyf5n8XM7rzn94O5vOmOfl+L7sDH2N4w1H1x92N+0xh6X974qheTrC/fvPGz4KlUgt3z8qNWabbdmPqmr7bfUFCc1OAUkkXTIr+vq2nLPPLj7nuXlxreNtb8wiFEKyS8vNxovyzG/N2hf3i8mILbZ5kNf22+xHGo7aowCom2pacYrhUNlW678RvFHztqnjbF7zJBf8hvKXjnmi3J7Rd0HUw65xGi71SQfatp+o50IFU9MAakYfP10cm9XZVvu2Qd3XmuN+Zv1axnluTPm89zOGkVs633rlg8tbb9bZy2PdykgEfIoP0DVtuVK7PaCafyLMXaMD5m0e+R21rOGr8IClw6scz4UtP1eSlO2/6WAVJpatyi3rI63W9PX+lbFSqcONNni/Ts/Iv/m8aFxh5PbWR9ZorXLOwAAEABJREFU+MyuXxx3nLofTz6M8deSv6bk2nrEGLdY93OiyvVTQKrUNnbXxbbcSmcNOVmnsS3YD/2OM78UMrY6jkU+1rIu19YJI9eY4asygXoWkMp485vIWResgDjXoICMeYqQjzEBOXwsAQrIWHx1PNjeGWrV1jgKyNiY5GNsQgYoLEABKUxXzwOtMQeCrdzaZD42JtiaKh5IYT4qFmK6MgUoIGXqMjYCCCCQsQAFJOPksjQEEECgTAEKSJm6JYzNkAgggEAqAhSQVDJBHAgggIAyAQqIsoQRLgIIxBJg3m4BCki3CK8RQAABBIYSoIAMxcROCCCAAALdAhSQbhFelyXAuAggkJkABSSzhLIcBBBAoCoBCkhV0syDAAIIxBIoaV4KSEmwDIsAAgjkLkAByT3DrA8BBBAoSYACUhIsw+YkwFoQQKCXAAWklwrbEEAAAQQGClBABhKxAwIIIIBAL4EqCkivedmGAAIIIKBcgAKiPIGEjwACCMQSoIDEkmdeBKoQYA4EShSggJSIy9AIIIBAzgIUkJyzy9oQQACBEgUoIFvi8iYCCCCAQD8BCkg/GbYjgAACCGwpQAHZkoc3EUAglgDzpi9AAUk/R0SIAAIIJClAAUkyLQSFAAIIpC9AAUk/R8Ui5CgEEECgZAEKSMnADI8AAgjkKkAByTWzrAsBBGIJ1GZeCkhtUs1CEUAAgbACFJCwnoyGAAII1EaAAlKbVOtZKJEigIAOAQqIjjwRJQIIIJCcAAUkuZQQEAIIIBBLYLR5KSCjebE3AggggMBFAQrIRQj+gwACCCAwmgAFZDQv9kZgKwHeQ6BWAhSQWqWbxSKAAALhBCgg4SwZCQEEEKiVQFIFpFbyLBYBBBBQLkABUZ5AwkcAAQRiCVBAYskzLwJJCRAMAqMLUEBGN+MIBBBAAAERoIAIAt8IIIAAAqMLUEBGN+t1BNsQQACB2glQQGqXchaMAAIIhBGggIRxZBQEEIglwLzRBCgg0eiZGAEEENAtQAHRnT+iRwABBKIJUECi0acyMXEggAACxQQoIMXcOCqQwOmH9jgexQ0CpYFhECgkQAEpxMZBCCCAwPgC2keggGjPIPEjgAACkQQoIJHgmRYBBBDQLkAB0Z7BOsfP2hFAIKoABSQqP5MjgAACegUoIHpzR+QIIIBALIGVeSkgKwz8gQACCCAwqgAFZFQx9kcAAQQQWBGggKww8AcC1QowGwI5CFBAcsgia0AAAQQiCFBAIqAzJQIIIJCDgM4CkoM8a0AAAQSUC1BAlCeQ8BFAAIFYAhSQWPLMi4BOAaJG4LIABeQyBU8QQAABBEYRoICMosW+CCCAAAKXBSgglymqecIsCCCAQC4CFJBcMsk6EEAAgYoFKCAVgzMdAgjEEmDe0AIUkNCijDeSwN7Hz1gexQ1GwmZnBAILUEACgzIcAgggUBcBCkhdMj3+OhkBAQQQ2CBAAdnAwQsEEEAAgWEFKCDDSrEfAgggEEsg0XkpIIkmhrAQQACB1AUoIKlniPgQQACBRAUoIIkmhrBCCjAWAgiUIUABKUOVMRFAAIEaCFBAapBklogAAgiUITBMASljXsZEAAEEEFAuQAFRnkDCRwABBGIJUEBiyTMvAsMIsA8CCQtQQBJODqEhgAACKQtQQFLODrEhgAACCQtkXkASlic0BBBAQLkABUR5AgkfAQQQiCVAAYklz7wIZC7A8vIXoIDkn2NWiAACCJQiQAEphZVBEUAAgfwFKCCp5pi4EEAAgcQFKCCJJ4jwEEAAgVQFKCCpZoa4EEAglgDzDilAARkSit0QQAABBDYKUEA2evAKAQQQQGBIAQrIkFDsNrwAeyKAQD0EKCD1yDOrRAABBIILUECCkzIgAgggEEug2nkpINV6MxsCCCCQjQAFJJtUshAEEECgWgEKSLXezJa2ANEhgMAIAhSQEbDYFQEEEEBgTYACsmbBMwQQQACBEQSCFpAR5mVXBBBAAAHlAhQQ5QkkfAQQQCCWAAUkljzzIhBUgMEQqF6AAlK9OTMigAACWQhQQLJII4tAAAEEqheggKya8ycCCCCAwIgCFJARwdgdAQQQQGBVgAKy6sCfCCAQS4B51QpQQNSmjsARQACBuAIUkLj+zI4AAgioFaCAqE3dpcD5LwIIIBBHgAISx51ZEUAAAfUCFBD1KWQBCCAQS6Du81JA6n4GsH4EEECgoAAFpCAchyGAAAJ1F6CA1P0MiLl+5kYAAdUCFBDV6SN4BBBAIJ4ABSSevdKZ3VvhAg85VriodI0U0jDkWLoUaxhtkCVTQIIw1mqQ/wu2WmdeDDZWfQciH/XNffSVU0Cip0BbAC7YDyxnKSDjZ598jG/ICEUFKCBF5Qoed3Bi6s8LHprEYa5jghWQbc6p/Q3EJPJFPtYSof3aWluJnmcUkIpz1Wg0/qI5dfgHzebUxyqeOsh0ezuLzztjXht3MOfM67uWF/9t3HHqfjz5MMZfS/6a8tdW3c+HqtdPAalaXOazxlxjtzW+3Jw69LWJiYkbZJOab/ukWTLm/N3GuHPFg5Zjl89/dHWs4qNwpDGrhvXMh792/DXkryV/TRm+KheIU0AqX2aaE1pj73R223eaE4e/sH///qvSjHJzVPseP/eyce5PNr8z3BZn3Gf3PXnuu8PtzV6DBOqWD3+t+GvGXzv+Ghrkw/vlCVBAyrMdamRr7XbbMPfv3L33jebk4XvkICuP5L/3nlw8aY37A7md9d6wwcptq5/4Y/Y9vvi3wx7DfsMJ1CQfDX+N+GvFXzP+2hlOh73KEqCAlCU74rhyMRyw1jw9MXnoxYNTUx8e8fAou+95fOGL2y50fs459/WBATjztYZxN/pjBu7LDoUEvO0Q+VgdW1k+/DUht6u+5a8Ra+2B1UXwZ2wBCkjsDHTPb+1tDdP4hlwszx44cHWz++3UXu9+crG17+TCrzhz/ha5NfVp48w/y+2ttjym5fkp+Y3jU+7C+Zv3njzza3tOLrRTiz+3eHLLh78G/LXgrwlr7M255Uv7eiggXRmUWzI/6doU5aVcLEev3Nn5/kElbb/75N9F9j2+8HdSKD6x9+TChDyulufH9jy+8BT/3lH9KbQvg3z4c99fA/5aqF6w54w/7rm1xhspIJuT39q8aW1Ltc/sLt+a2FTc9lutF7PlILCxLdfuSmVN8hv2TCqxpBIHBWRTJlxyJ4k1ett+N/GyAYE+Asm35To73Sf02m6mgHSn3pn/7t6UymurtO03FT/iSFNg+LbcuPFb23khbgTpzU4B6crJ+aXGPzj56tqczEurtO03GUACSUlATVuu/EjoWOe+mBJeCrFQQLqyMD//w7ax5r+6Nif3UgqJurbf5BAJKJrAwampDzenDilqy7X/OTs7+6NoYIlOTAHpkZiOcZ+TzUvySP97+Lbf9NdChNkLaGzLld8+Fqy78Jnsk1NggRSQHmhvt1rfdqbz+z3eSnaT/PvI0St2dF5vTh56WILcIQ++EUhJYIecm8flHH3Dn6spBTYwlo773bm5ue8N3K+GO1BA+iS93Wr9k+m4Y8a4xT67JLdZbmvtkceJ5tThV3wrZHIBElAtBfy56M9JOTcflcduPQhuUf4i+fF2u/WVsWPOdAAKyBaJnZubOWU6yz/vjHlzi92Se8vS9ptcTuoYUPJtuVslxbnX/bUvf5H80la71f09CsiAM0B+dX31/NmF2+Q+6MkBuyb3tjX2TtPY/mpzcuqkb5VMLkACylLAn2vNicNf8OfeyjmobJX+Wj+3tPghf+0rC73ycCkgQ5DPz8+/156dech0LtzojFPXC25t4wH/CaZNRZ/2uzEtvFIisKEtV0nMl8NcubblGvfXur/mL7/Bk74CFJC+NJvfkL+RfK/dmrnLLXfuVndby1rafjenlC2BBA6qa8tdW7i/lv017a9tf42vvcOzQQIUkEFCPd73/6jWbk3fJL/qPiKPhR67pLuJtt90c6MwMo1tuZeY5do9I4/j/lr21/Sl7fx3o8BWryggW+ls/d6S/Kp74vxS4zrj3HNb75reu3Jvmrbf9NKiKSK9bbmiLLerTsm1e0Su4cfkpY7/zZcEmto3BWTMjPj/5frc7MzRjuncISfly2MOV+nh1to98qDtt1J1/ZPpbcsVe+de8tdquzVzzF+7soXvMQQoIGPgrT/0rVbrm3JS3uqcuU9+LZ5f/17qzy1tv+WlKKORNbfl+mtSrs175S97t/trNaO0RF0KBSQsf6c9O/302YXT17mOeUJO2gthhy93NGvsnc5u+45vwfStmOXOxuhaBPy54M8Jf274c0RL3D5Ofw36a9Ffk3JtPiPb5N/M5U++gwhQQIIwbhzknXfe+XF7bvoB65b9/82rqrZfuaW13TbM/bT9bsxpTV9taMv154YmB7ml/IK/Bv216K9JTbFriTXxAqKFsXecviVQbmvR9tubh60JC9CWm3ByEgqNAlJBMnyLYJu23wqkmWJcAdpyxxWs1/EUkOryTdtvddbMNLrAprbc0YeId4TcrqItNwI/BaRidN86ODdL22/F7Ey3hQBtuVvg8NaWAhSQLXnKe9O3ErZbM7T9lkfMyAMEaMsdAMTbAwUoIAOJCu4w3GG0/Q7nxF4BBWjLDYhZ86EoIAmcAL7F0Lca+pZDuZdL228COck0BNpyM01srGVRQGLJ95iXtt8eKGwKIlCzttwgZgwyWIACMtio8j1o+62cPNsJacvNNrVJLIwCkkQaegZB229PFjYOKUBb7pBQ7FZcgAJS3K6SI2O0/YZamOXTfkNRjjQObbkjcbHzGAIUkDHwqjyUtt8qtXXORVuuzrxpjpoCoit7tP3qylcl0dKWWwlzRZPomoYCoitfK9HS9rvCwB/G0JbLWRBVgAISlX+8yWn7Hc9P89G05WrOXj6xU0AyyCVtv5eTmP0T2nKzT7GqBVJAVKVry2Bp+92SR/2btOWqT2F+C6CAZJZT2n4zS6gsh7ZcQeA7SYENBSTJCAmqkABtv4XYkjqIttyk0kEwPQQoID1QMtpE26/CZNKWqzBpNQ2ZAlKDxNP2qyHJKzHSlrvCwB9aBCggWjIVIE7afgMgljQEbbklwTJsqQIUkFJ50xyctt908kJbbjq5IJLRBXIpIKOvnCNo+417DtCWG9ef2QMIUEACIGoegrbf6rNHW2715sxYjgAFpBxXdaPS9lt+yrJtyy2fjhkSFaCAJJqYSGHR9lsCPG25JaAyZBICFJAk0pBWELT9BssHbbnBKBkoRQEKSPSspBsAbb/Fc0NbbnE7jtQjQAHRk6tokdL2Ozw9bbnDW7GnfgEKiP4cVrUC2n63lqYtd2ufJN8lqPEEKCDj+dXuaNp+N6ecttzNJmyphwAFpB55Dr5K2n6NoS03+GnFgMoEKCDKEpZUuMbUsu2XttzEzkLCiSZAAYlGn8/ENWr7pS03n9OWlQQQoIAEQGSIVYGc235py13NMX8mI80AmysAAAZzSURBVJBEIBSQJNKQVxAX236vdc49Io8FVauz9raGaXyjOXXoWd+S6x/+ud9mjb1Z01rE/ow8jrdb0zf5nGiKnVh1CFBAdORJZZTt2ZkT56y73hn3rLYFSLE4euXOzvf9wz/XFr83P79krpccPCaxL8mDbwSCC1BAgpMy4HqBH7Vas+3WzCc7pnOH/FB7ef17MZ8PN7fdZYx/GD1fzr3krb35/PzMnJ7AiVSjAAVEY9YUxqy57VcDt9yqmnfO3Ds3O3O7t9YQMzHqF6CA6M+hphWstP0unnnviPzAe0pT4CnH2jHmSW/anp1+RuJ08uAbgUoEihWQSkJjklwF3pWv9uzMp0znwo1yW+uFXNdZ9rpW7MTwrdb0/UL6btnzMT4C3QIUkG4RXlcmoLnttzKkHhPJrxhvuuXO3fLvHHd5wx67sAmBSgQoIJUwM8lWAr7FtN2avklua+lr+91qYYHfEx/flktbbmBXhisuQAEpbseRYQVUf9pvWIrNo8ntqlPnlxpH5NYfbbmbedgSSYACEgmeaXsLaP60394rGnPrWlvuMW8z5mgcjkBQgdoVkKB6DFaagG9FbbdmbnXO3Ce3buZLmyjRgf2aZe205SaaH8JaFaCArDrwZ5oCK22/ZxdOX+c65gn5oXohzTDDReXX6Nfq19ymLTccLCOVIkABKYWVQUMKaP6031Ec5N85XrBu+Zb23PQDfs2jHKtjX6LMTYACkltGM16Pb1mV21p3+RZW38qay1L9Wvya/Nr8GnNZF+vIX4ACkn+Os1vhxbbflU/7NcYt6l2gW5RbVr4t91q/Jr3rIPK6ClBA9GSeSLsE2v7Tfs82ftY491zXW8m/lNtVp85J7LIG35abfLwEiEAvAQpILxW2qRHwra1zszNH/SfQyg/l9D/tl7ZcNecWgQ4WoIAMNmIPBQKpt/3KrSo+LVfBedQ3RN7oKUAB6cnCRqUCybX9SuG4QFuu0rOJsAcKUEAGErGDNgHfAutbYa1bvkVua0X7tF8/t4/Bx+Jj0uZIvAgMEqCADBLi/QACcYbwLbG+Nda3yPpW2aqi8HP5Of3cPoaq5mUeBKoWoIBULc58lQv4Ftl2BZ/2K7er+LTcyrPLhDEFKCAx9Zm7SoFSP+1XblfxablVZpO5hhYoc0cKSJm6jJ2cQPC2X9pyk8sxAVUnQAGpzpqZEhIYt+1XblfRlptQPgkljgAFJI47s6YhsNL2u3jmvSNSEI4b51qbwuresLrPn/lj2nxabrcOr2smQAGpWcJZ7maBd+WrPTvz2NzszCFnOh93xp2SvdryuPTdXtnWcR/z+8y1pv9KDnn30pv8F4G6ClBA6pp51t1ToN1qfandmjkmRWLinFu+Yfn80rX++cq2uZnnex7ERgRqKlByAampKsvOQmB+dva1t99++80sFsMiEChBgAJSAipDIoAAAnUQoIDUIcussZYCLBqBsgUoIGULMz4CCCCQqQAFJNPEsiwEEECgbAEKSD9htiOAAAIIbClAAdmShzcRQAABBPoJUED6ybAdAQRiCTCvEgEKiJJEESYCCCCQmgAFJLWMEA8CCCCgRIACoiRRo4TJvggggEAVAhSQKpSZAwEEEMhQgAKSYVJZEgIIxBKo17wUkHrlm9UigAACwQQoIMEoGQgBBBColwAFpF75Tn21xIcAAooEKCCKkkWoCCCAQEoCFJCUskEsCCCAQCyBAvNSQAqgcQgCCCCAgDEUEM4CBBBAAIFCAhSQQmwchEC3AK8RqJ8ABaR+OWfFCCCAQBABCkgQRgZBAAEE6ieQSgGpnzwrRgABBJQLUECUJ5DwEUAAgVgCFJBY8syLQCoCxIFAQQEKSEE4DkMAAQTqLkABqfsZwPoRQACBggIUkIJwa4fxDAEEEKinAAWknnln1QgggMDYAhSQsQkZAAEEYgkwb1wBCkhcf2ZHAAEE1ApQQNSmjsARQACBuAIUkLj+cWdndgQQQGAMAQrIGHgcigACCNRZgAJS5+yzdgQQiCWQxbwUkCzSyCIQQACB6gUoINWbMyMCCCCQhQAFJIs01m8RrBgBBOILUEDi54AIEEAAAZUCFBCVaSNoBBBAIJbA2rwUkDULniGAAAIIjCBAARkBi10RQAABBNYEKCBrFjxDoAoB5kAgGwEKSDapZCEIIIBAtQIUkGq9mQ0BBBDIRkBdAclGnoUggAACygV+CgAA//+xPqLwAAAABklEQVQDAAIugy+Vxz7eAAAAAElFTkSuQmCC"/>
+<span class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed tracking-tight">Garage Hakmaoui</span>
+</div>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex items-center gap-md">
+<a class="text-tertiary-fixed-dim font-bold border-b-2 border-tertiary-fixed-dim pb-1 font-button text-button hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-button text-button hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-button text-button hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Reviews</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-button text-button hover:text-tertiary-fixed-dim transition-colors duration-200" href="#">Contact</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center">
+<button class="hidden md:flex items-center justify-center bg-on-tertiary-container text-on-tertiary font-button text-button px-6 py-3 rounded hover:opacity-90 transition-opacity">
+                    Book Appointment
+                </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-xl">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter pt-lg pb-xl mt-md">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Hero Text Content -->
+<div class="md:col-span-5 flex flex-col gap-md z-10">
+<div class="inline-flex items-center gap-2 bg-surface-container-high px-3 py-1 rounded-full w-fit">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Now accepting new clients</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl md:text-headline-xl text-primary text-balance">
+                        Hakmaoui Precision: <br/>
+<span class="text-on-secondary-fixed-variant">Expert Auto Care in Mohammedia</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mt-sm">
+                        Experience the difference of technical precision and transparent service. We combine industrial-grade expertise with modern diagnostics to keep your vehicle running flawlessly.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-sm mt-md">
+<button class="bg-on-tertiary-container text-on-tertiary font-button text-button px-8 py-4 rounded shadow-sm hover:shadow-md hover:opacity-90 transition-all flex items-center justify-center gap-2 group">
+                            Book an Appointment
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="border border-outline text-secondary font-button text-button px-8 py-4 rounded hover:bg-surface-container-low transition-colors flex items-center justify-center">
+                            View Services
+                        </button>
+</div>
+</div>
+<!-- Hero Image Grid (Bento Style) -->
+<div class="md:col-span-7 grid grid-cols-2 gap-sm mt-lg md:mt-0 relative">
+<!-- Subtle background decoration -->
+<div class="absolute -inset-4 bg-surface-container-low rounded-xl -z-10 hidden md:block"></div>
+<div class="col-span-2 md:col-span-2 h-64 md:h-[400px] rounded overflow-hidden border border-outline-variant relative group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A brightly lit, immaculately clean modern automotive workshop in Mohammedia. High-end diagnostic equipment sits next to a pristine white sports car elevated on a hydraulic lift. The lighting is cool, high-key white, reflecting off polished epoxy floors, emphasizing a clean, industrial aesthetic with subtle safety orange accents on the tool chests. Minimalist, uncluttered composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUnpXsUfX_Bl9v1OwBzG0nBU5fkJ_85ubk77_fq8da_P6-w4846FcHkV1D4iqVOIsE6ytXt6gCObEhQFbxB_x3Fb3gR_WTGmsknR2A6eBmrg_j6kJRsAzDK4B5GUYA_fkARZLcJ-66gQlhcO0o7hImf2RWj0lflHKY0RamJwrLIKhdMN8kPkHdlHUUcnZ9G0L8cMBNb1dLmfB9cMy6k4ULgazg9AC7kgjc0uTWvA_tEdR---5zqqZN4F1OGI81Mjm3XCXLpUvjdPno"/>
+<div class="absolute inset-0 border border-black/5 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Separation Spacer -->
+<div class="max-w-container-max mx-auto px-gutter py-md">
+<hr class="border-outline-variant/50"/>
+</div>
+<!-- About Us Section -->
+<section class="max-w-container-max mx-auto px-gutter py-xl">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 flex flex-col gap-4">
+<h2 class="font-label-caps text-label-caps text-on-tertiary-container uppercase tracking-widest">About Us</h2>
+<h3 class="font-headline-lg text-headline-lg text-primary text-balance">
+                        Reliability built on rigorous standards.
+                    </h3>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-md md:pl-lg">
+<!-- Stat Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded hover:border-outline hover:shadow-sm transition-all duration-300 flex flex-col gap-sm">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-on-surface-variant">verified_user</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mt-2">5-Star Service</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Our reputation in Mohammedia is built on hundreds of successful repairs and consistently transparent communication. We never compromise on quality.
+                        </p>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant p-md rounded hover:border-outline hover:shadow-sm transition-all duration-300 flex flex-col gap-sm">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-on-surface-variant">precision_manufacturing</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mt-2">Technical Precision</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Utilizing state-of-the-art diagnostic tools and an unwavering attention to detail, treating every vehicle as a precise mechanical system.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: Footer -->
+<footer class="bg-primary-container dark:bg-primary-container w-full mt-xl border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center py-lg px-gutter max-w-container-max mx-auto gap-md">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="text-headline-md font-headline-md text-surface-container-lowest tracking-tight">Garage Hakmaoui</span>
+<p class="font-body-md text-body-md text-on-primary-container text-center md:text-left">
+                    © 2024 Garage Hakmaoui. Professional Automotive Services in Mohammedia.
+                </p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-label-caps text-label-caps text-on-primary-container hover:text-surface-bright hover:underline transition-colors duration-200 uppercase tracking-widest" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:text-surface-bright hover:underline transition-colors duration-200 uppercase tracking-widest" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:text-surface-bright hover:underline transition-colors duration-200 uppercase tracking-widest" href="#">Service Status</a>
+</nav>
+</div>
+</footer>
+</body></html>
