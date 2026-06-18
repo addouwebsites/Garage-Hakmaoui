@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Garage Hakmaoui – Expert Auto Care in Mohammedia</title>
+  <meta name="description" content="Garage Hakmaoui offers precision automotive services in Mohammedia: diagnostics, engine repair, brakes, suspension, electrical systems, and more."/>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary-fixed-variant": "#44474b",
+            "on-tertiary-container":      "#e45400",
+            "secondary-fixed-dim":        "#c4c6cc",
+            "background":                 "#f8f9fa",
+            "on-surface-variant":         "#44474a",
+            "surface-container":          "#edeeef",
+            "on-secondary":               "#ffffff",
+            "outline-variant":            "#c5c6ca",
+            "inverse-on-surface":         "#f0f1f2",
+            "tertiary-container":         "#370e00",
+            "error-container":            "#ffdad6",
+            "primary-container":          "#1a1c1e",
+            "on-primary-container":       "#838486",
+            "on-tertiary-fixed":          "#370e00",
+            "surface-container-highest":  "#e1e3e4",
+            "on-secondary-container":     "#616569",
+            "surface-variant":            "#e1e3e4",
+            "surface-dim":                "#d9dadb",
+            "tertiary-fixed-dim":         "#ffb599",
+            "error":                      "#ba1a1a",
+            "primary":                    "#000101",
+            "secondary":                  "#5b5f63",
+            "on-tertiary":                "#ffffff",
+            "surface-tint":               "#5d5e61",
+            "on-primary-fixed-variant":   "#454749",
+            "on-error":                   "#ffffff",
+            "secondary-fixed":            "#e0e2e8",
+            "inverse-primary":            "#c6c6c9",
+            "tertiary":                   "#000000",
+            "on-tertiary-fixed-variant":  "#7f2b00",
+            "primary-fixed-dim":          "#c6c6c9",
+            "on-primary":                 "#ffffff",
+            "surface":                    "#f8f9fa",
+            "on-primary-fixed":           "#1a1c1e",
+            "on-secondary-fixed":         "#181c20",
+            "secondary-container":        "#e0e2e8",
+            "tertiary-fixed":             "#ffdbce",
+            "surface-container-lowest":   "#ffffff",
+            "on-surface":                 "#191c1d",
+            "outline":                    "#75777a",
+            "on-background":              "#191c1d",
+            "primary-fixed":              "#e2e2e5",
+            "surface-container-low":      "#f3f4f5",
+            "on-error-container":         "#93000a",
+            "surface-bright":             "#f8f9fa",
+            "surface-container-high":     "#e7e8e9",
+            "inverse-surface":            "#2e3132",
+            "brand-orange":               "#e45400"
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            sm:      "0.125rem",
+            lg:      "0.5rem",
+            xl:      "0.75rem",
+            full:    "9999px"
+          },
+          spacing: {
+            xs:             "4px",
+            sm:             "12px",
+            gutter:         "24px",
+            md:             "24px",
+            lg:             "48px",
+            xl:             "80px",
+            base:           "8px",
+            "container-max":"1280px"
+          },
+          fontFamily: {
+            "headline-xl":        ["Inter"],
+            "headline-lg":        ["Inter"],
+            "headline-lg-mobile": ["Inter"],
+            "headline-md":        ["Inter"],
+            "body-lg":            ["Inter"],
+            "body-md":            ["Inter"],
+            "label-caps":         ["JetBrains Mono"],
+            "button":             ["Inter"]
+          },
+          fontSize: {
+            "headline-xl":        ["48px",  {lineHeight:"56px", letterSpacing:"-0.02em", fontWeight:"700"}],
+            "headline-lg":        ["32px",  {lineHeight:"40px", letterSpacing:"-0.01em", fontWeight:"700"}],
+            "headline-lg-mobile": ["24px",  {lineHeight:"32px", fontWeight:"700"}],
+            "headline-md":        ["24px",  {lineHeight:"32px", fontWeight:"600"}],
+            "body-lg":            ["18px",  {lineHeight:"28px", fontWeight:"400"}],
+            "body-md":            ["16px",  {lineHeight:"24px", fontWeight:"400"}],
+            "label-caps":         ["12px",  {lineHeight:"16px", letterSpacing:"0.1em", fontWeight:"500"}],
+            "button":             ["14px",  {lineHeight:"20px", letterSpacing:"0.02em", fontWeight:"600"}]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ===== GLOBAL ===== */
+    html { scroll-behavior: smooth; }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined.filled {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* ===== NAVBAR ===== */
+    #navbar {
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    }
+    #navbar.scrolled {
+      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    }
+
+    /* ===== NAV ACTIVE LINK ===== */
+    .nav-link { position: relative; }
+    .nav-link.active {
+      color: #e45400;
+      font-weight: 700;
+    }
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0; right: 0;
+      height: 2px;
+      background: #e45400;
+      border-radius: 999px;
+    }
+
+    /* ===== HERO IMAGE ===== */
+    .hero-img-wrapper { overflow: hidden; border-radius: 0.5rem; }
+    .hero-img-wrapper img {
+      transition: transform 0.7s ease;
+    }
+    .hero-img-wrapper:hover img { transform: scale(1.04); }
+
+    /* ===== SERVICE CARDS ===== */
+    .service-card {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .service-card:hover {
+      border-color: #75777a;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      transform: translateY(-3px);
+    }
+
+    /* ===== REVIEW CARDS ===== */
+    .review-card {
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .review-card:hover {
+      border-color: #75777a;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    }
+
+    /* ===== GRID BACKGROUND (reviews section) ===== */
+    .bg-grid-pattern {
+      background-image:
+        linear-gradient(to right,  #e9ecef 1px, transparent 1px),
+        linear-gradient(to bottom, #e9ecef 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* ===== SCROLL-REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== MOBILE MENU ===== */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+    }
+    #mobile-menu.open {
+      max-height: 400px;
+    }
+
+    /* ===== CONTACT FORM ===== */
+    .field-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: #44474a;
+    }
+    .field-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid #c5c6ca;
+      border-radius: 0.25rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      background: #fff;
+      color: #191c1d;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .field-input:focus {
+      border-color: #191c1d;
+      box-shadow: 0 0 0 3px rgba(228,84,0,0.12);
+    }
+
+    /* ===== CTA BUTTON PULSE ===== */
+    @keyframes pulse-ring {
+      0%   { box-shadow: 0 0 0 0   rgba(228,84,0,0.35); }
+      70%  { box-shadow: 0 0 0 10px rgba(228,84,0,0); }
+      100% { box-shadow: 0 0 0 0   rgba(228,84,0,0); }
+    }
+    .btn-cta-pulse { animation: pulse-ring 2.4s ease-out infinite; }
+
+    /* ===== STATS COUNTER ===== */
+    .stat-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 1;
+      color: #e45400;
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface antialiased font-body-md">
+
+<!-- ========================================================
+     TOP NAV BAR
+     ======================================================== -->
+<header id="navbar" class="bg-surface fixed top-0 w-full z-50 border-b border-outline-variant">
+  <div class="flex justify-between items-center px-gutter max-w-container-max mx-auto h-20">
+
+    <!-- Brand -->
+    <a href="#home" class="flex items-center gap-sm" aria-label="Garage Hakmaoui – Home">
+      <!-- SVG Logo (inline) -->
+      <svg width="40" height="40" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M100 30 L160 65 L160 135 L100 170 L40 135 L40 65 Z"
+              fill="none" stroke="#1a1c1e" stroke-width="12" stroke-linejoin="round"/>
+        <path d="M75 70 L75 130 M125 70 L125 130 M75 100 L125 100"
+              fill="none" stroke="#e45400" stroke-width="10" stroke-linecap="round"/>
+      </svg>
+      <span class="font-headline-md text-headline-md font-bold text-primary tracking-tight">Garage Hakmaoui</span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center gap-md" aria-label="Main navigation">
+      <a href="#home"     class="nav-link active   font-button text-button text-on-surface-variant hover:text-brand-orange transition-colors duration-200" id="nav-home">Home</a>
+      <a href="#services" class="nav-link          font-button text-button text-on-surface-variant hover:text-brand-orange transition-colors duration-200" id="nav-services">Services</a>
+      <a href="#reviews"  class="nav-link          font-button text-button text-on-surface-variant hover:text-brand-orange transition-colors duration-200" id="nav-reviews">Reviews</a>
+      <a href="#contact"  class="nav-link          font-button text-button text-on-surface-variant hover:text-brand-orange transition-colors duration-200" id="nav-contact">Contact</a>
+    </nav>
+
+    <!-- Desktop CTA -->
+    <a href="#contact"
+       id="nav-book-btn"
+       class="hidden md:flex items-center gap-1 bg-brand-orange text-white font-button text-button px-6 py-3 rounded hover:opacity-90 transition-opacity btn-cta-pulse">
+      Book Appointment
+    </a>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="mobile-toggle" class="md:hidden text-primary p-2" aria-label="Toggle menu" aria-expanded="false">
+      <span class="material-symbols-outlined" id="menu-icon">menu</span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Drawer -->
+  <div id="mobile-menu" class="md:hidden bg-surface border-t border-outline-variant px-gutter">
+    <nav class="flex flex-col py-md gap-md" aria-label="Mobile navigation">
+      <a href="#home"     class="font-button text-button text-on-surface-variant hover:text-brand-orange transition-colors">Home</a>
+      <a href="#services" class="font-button text-button text-on-surface-variant hover:text-brand-orange transition-colors">Services</a>
+      <a href="#reviews"  class="font-button text-button text-on-surface-variant hover:text-brand-orange transition-colors">Reviews</a>
+      <a href="#contact"  class="font-button text-button text-on-surface-variant hover:text-brand-orange transition-colors">Contact</a>
+      <a href="#contact"  class="inline-flex items-center justify-center bg-brand-orange text-white font-button text-button px-6 py-3 rounded hover:opacity-90 transition-opacity">
+        Book Appointment
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- ========================================================
+     MAIN CONTENT
+     ======================================================== -->
+<main>
+
+  <!-- =====================================================
+       SECTION 1: HERO / HOME
+       ===================================================== -->
+  <section id="home" class="max-w-container-max mx-auto px-gutter pt-36 pb-xl">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+
+      <!-- Text -->
+      <div class="md:col-span-5 flex flex-col gap-md reveal">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-surface-container-high px-3 py-1 rounded-full w-fit">
+          <span class="w-2 h-2 rounded-full bg-brand-orange inline-block"></span>
+          <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Now accepting new clients</span>
+        </div>
+
+        <h1 class="font-headline-xl text-headline-xl text-primary text-balance leading-tight">
+          Hakmaoui Precision:<br/>
+          <span class="text-on-secondary-fixed-variant">Expert Auto Care in Mohammedia</span>
+        </h1>
+
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+          Experience the difference of technical precision and transparent service. We combine industrial-grade expertise with modern diagnostics to keep your vehicle running flawlessly.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-sm mt-md">
+          <a href="#contact"
+             class="bg-brand-orange text-white font-button text-button px-8 py-4 rounded shadow-sm hover:shadow-md hover:opacity-90 transition-all flex items-center justify-center gap-2 group">
+            Book an Appointment
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+          <a href="#services"
+             class="border border-outline text-secondary font-button text-button px-8 py-4 rounded hover:bg-surface-container-low transition-colors flex items-center justify-center">
+            View Services
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Image -->
+      <div class="md:col-span-7 reveal" style="transition-delay:0.15s">
+        <div class="relative">
+          <div class="absolute -inset-4 bg-surface-container-low rounded-xl -z-10 hidden md:block"></div>
+          <div class="hero-img-wrapper h-64 md:h-[420px] border border-outline-variant">
+            <img
+              src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&auto=format&fit=crop&q=80"
+              alt="Modern automotive workshop with diagnostic equipment"
+              class="w-full h-full object-cover"
+              loading="eager"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="bg-primary-container py-lg mt-0">
+    <div class="max-w-container-max mx-auto px-gutter">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-md text-center reveal">
+        <div>
+          <div class="stat-number" data-target="800">0</div>
+          <p class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mt-2">Happy Clients</p>
+        </div>
+        <div>
+          <div class="stat-number" data-target="12">0</div>
+          <p class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mt-2">Years Experience</p>
+        </div>
+        <div>
+          <div class="stat-number" data-target="15">0</div>
+          <p class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mt-2">Expert Mechanics</p>
+        </div>
+        <div>
+          <div class="stat-number" data-target="99">0</div>
+          <p class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-widest mt-2">% Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Us -->
+  <section class="max-w-container-max mx-auto px-gutter py-xl">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+      <div class="md:col-span-4 flex flex-col gap-4 reveal">
+        <span class="font-label-caps text-label-caps text-brand-orange uppercase tracking-widest">About Us</span>
+        <h2 class="font-headline-lg text-headline-lg text-primary text-balance">
+          Reliability built on rigorous standards.
+        </h2>
+      </div>
+      <div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-md md:pl-lg reveal" style="transition-delay:0.12s">
+        <!-- Card 1 -->
+        <div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg hover:border-outline hover:shadow-sm transition-all duration-300 flex flex-col gap-sm">
+          <div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded">
+            <span class="material-symbols-outlined text-on-surface-variant">verified_user</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-primary mt-2">5-Star Service</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Our reputation in Mohammedia is built on hundreds of successful repairs and consistently transparent communication. We never compromise on quality.
+          </p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-surface-container-lowest border border-outline-variant p-md rounded-lg hover:border-outline hover:shadow-sm transition-all duration-300 flex flex-col gap-sm">
+          <div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded">
+            <span class="material-symbols-outlined text-on-surface-variant">precision_manufacturing</span>
+          </div>
+          <h3 class="font-headline-md text-headline-md text-primary mt-2">Technical Precision</h3>
+          <p class="font-body-md text-body-md text-on-surface-variant">
+            Utilizing state-of-the-art diagnostic tools and an unwavering attention to detail, treating every vehicle as a precise mechanical system.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-container-max mx-auto px-gutter"><hr class="border-outline-variant/50"/></div>
+
+  <!-- =====================================================
+       SECTION 2: SERVICES
+       ===================================================== -->
+  <section id="services" class="max-w-container-max mx-auto px-gutter py-xl">
+    <div class="mb-xl text-center reveal">
+      <span class="font-label-caps text-label-caps text-brand-orange uppercase tracking-widest">What We Offer</span>
+      <h2 class="font-headline-xl text-headline-xl text-primary mt-md mb-md">Our Services</h2>
+      <p class="font-body-lg text-body-lg text-secondary max-w-3xl mx-auto">
+        Comprehensive automotive care delivered with technical precision and unwavering transparency.
+        From routine maintenance to complex diagnostics, our Mohammedia workshop is equipped to handle your vehicle's needs.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-md mb-xl">
+
+      <!-- Service 1 -->
+      <div class="service-card bg-surface-container-lowest border border-surface-variant rounded-lg p-lg flex flex-col h-full reveal">
+        <div class="text-brand-orange mb-md">
+          <span class="material-symbols-outlined text-[36px]">oil_barrel</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-sm">General Maintenance</h3>
+        <p class="font-body-md text-body-md text-secondary flex-grow mb-md">
+          Comprehensive fluid checks, filter replacements, and scheduled servicing to keep your vehicle running optimally.
+        </p>
+        <div class="font-label-caps text-label-caps text-outline tracking-wider pt-md border-t border-surface-variant">INCLUDES OIL CHANGE</div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card bg-surface-container-lowest border border-surface-variant rounded-lg p-lg flex flex-col h-full reveal" style="transition-delay:0.07s">
+        <div class="text-brand-orange mb-md">
+          <span class="material-symbols-outlined text-[36px]">troubleshoot</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-sm">Advanced Diagnostics</h3>
+        <p class="font-body-md text-body-md text-secondary flex-grow mb-md">
+          State-of-the-art computer scanning and physical inspection to accurately pinpoint mechanical and electrical issues.
+        </p>
+        <div class="font-label-caps text-label-caps text-outline tracking-wider pt-md border-t border-surface-variant">OBD2 SCANNING</div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card bg-surface-container-lowest border border-surface-variant rounded-lg p-lg flex flex-col h-full reveal" style="transition-delay:0.14s">
+        <div class="text-brand-orange mb-md">
+          <span class="material-symbols-outlined text-[36px]">car_repair</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-sm">Brake &amp; Suspension</h3>
+        <p class="font-body-md text-body-md text-secondary flex-grow mb-md">
+          Expert repair and replacement of brake pads, rotors, shocks, and struts for safe and responsive handling.
+        </p>
+        <div class="font-label-caps text-label-caps text-outline tracking-wider pt-md border-t border-surface-variant">SAFETY INSPECTION</div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-card bg-surface-container-lowest border border-surface-variant rounded-lg p-lg flex flex-col h-full reveal" style="transition-delay:0.0s">
+        <div class="text-brand-orange mb-md">
+          <span class="material-symbols-outlined text-[36px]">settings</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-sm">Engine Repair</h3>
+        <p class="font-body-md text-body-md text-secondary flex-grow mb-md">
+          From minor adjustments to major overhauls, ensuring your engine delivers reliable power and efficiency.
+        </p>
+        <div class="font-label-caps text-label-caps text-outline tracking-wider pt-md border-t border-surface-variant">TIMING BELTS &amp; GASKETS</div>
+      </div>
+
+      <!-- Service 5 -->
+      <div class="service-card bg-surface-container-lowest border border-surface-variant rounded-lg p-lg flex flex-col h-full reveal" style="transition-delay:0.07s">
+        <div class="text-brand-orange mb-md">
+          <span class="material-symbols-outlined text-[36px]">battery_charging_full</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-sm">Electrical Systems</h3>
+        <p class="font-body-md text-body-md text-secondary flex-grow mb-md">
+          Troubleshooting and repair of batteries, alternators, wiring harnesses, and complex electronic control units.
+        </p>
+        <div class="font-label-caps text-label-caps text-outline tracking-wider pt-md border-t border-surface-variant">VOLTAGE TESTING</div>
+      </div>
+
+      <!-- Service 6 -->
+      <div class="service-card bg-surface-container-lowest border border-surface-variant rounded-lg p-lg flex flex-col h-full reveal" style="transition-delay:0.14s">
+        <div class="text-brand-orange mb-md">
+          <span class="material-symbols-outlined text-[36px]">ac_unit</span>
+        </div>
+        <h3 class="font-headline-md text-headline-md text-primary mb-sm">A/C &amp; Heating</h3>
+        <p class="font-body-md text-body-md text-secondary flex-grow mb-md">
+          Diagnostics, recharging, and full repairs for climate-control systems to keep you comfortable year-round.
+        </p>
+        <div class="font-label-caps text-label-caps text-outline tracking-wider pt-md border-t border-surface-variant">REFRIGERANT REFILL</div>
+      </div>
+    </div>
+
+    <!-- Services CTA Banner -->
+    <div class="bg-surface-container-low rounded-xl p-xl flex flex-col md:flex-row items-center justify-between gap-lg border border-outline-variant reveal">
+      <div class="md:max-w-xl text-center md:text-left">
+        <h3 class="font-headline-lg text-headline-lg text-primary mb-sm">Need a specialized repair?</h3>
+        <p class="font-body-md text-body-md text-secondary">
+          Contact our technical team for a detailed assessment and transparent pricing estimate for your specific vehicle requirements.
+        </p>
+      </div>
+      <a href="#contact"
+         class="inline-flex items-center justify-center bg-brand-orange text-white px-xl py-md rounded font-button text-button hover:opacity-90 transition-opacity shadow-sm shrink-0">
+        Get a Quote
+        <span class="material-symbols-outlined ml-2 text-[20px]">arrow_forward</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="max-w-container-max mx-auto px-gutter"><hr class="border-outline-variant/50"/></div>
+
+  <!-- =====================================================
+       SECTION 3: REVIEWS
+       ===================================================== -->
+  <section id="reviews" class="bg-grid-pattern relative py-xl">
+    <!-- Gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-surface via-transparent to-surface pointer-events-none"></div>
+
+    <div class="max-w-container-max mx-auto px-gutter relative z-10">
+
+      <!-- Heading -->
+      <div class="text-center mb-xl reveal">
+        <span class="font-label-caps text-label-caps text-brand-orange uppercase tracking-widest">What Clients Say</span>
+        <h2 class="font-headline-xl text-headline-xl text-primary mt-md mb-md">Client Testimonials</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          Real feedback from our customers in Mohammedia. We pride ourselves on technical excellence and transparent communication.
+        </p>
+        <div class="mt-lg flex justify-center gap-md items-center">
+          <div class="flex text-brand-orange">
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+          </div>
+          <span class="font-label-caps text-label-caps text-on-surface-variant">4.9 AVERAGE RATING</span>
+        </div>
+      </div>
+
+      <!-- Bento grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-md auto-rows-min">
+
+        <!-- Review 1: Featured (8 cols) -->
+        <div class="review-card md:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-lg p-lg flex flex-col reveal">
+          <div class="flex justify-between items-start mb-md">
+            <div>
+              <div class="flex text-brand-orange mb-xs">
+                <span class="material-symbols-outlined filled">star</span>
+                <span class="material-symbols-outlined filled">star</span>
+                <span class="material-symbols-outlined filled">star</span>
+                <span class="material-symbols-outlined filled">star</span>
+                <span class="material-symbols-outlined filled">star</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md text-primary">Exceptional Diagnostic Skills</h3>
+            </div>
+            <span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container px-sm py-xs border border-outline-variant rounded shrink-0">VERIFIED REPAIR</span>
+          </div>
+          <p class="font-body-lg text-body-lg text-on-surface-variant mb-lg italic flex-grow">
+            "Best garage in Mohammedia. Honest and professional. My car had a complex electrical issue that two other shops couldn't figure out. The team at Hakmaoui diagnosed it within an hour and provided a clear, itemized quote before starting work."
+          </p>
+          <div class="flex items-center gap-sm mt-auto">
+            <div class="w-10 h-10 bg-surface-container-high rounded-full flex items-center justify-center text-primary font-bold text-sm shrink-0">AK</div>
+            <div>
+              <p class="font-button text-button text-primary">Ahmed K.</p>
+              <p class="font-label-caps text-label-caps text-on-surface-variant mt-1">Volkswagen Golf V</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2: Compact (4 cols) -->
+        <div class="review-card md:col-span-4 bg-surface-container-lowest border border-outline-variant rounded-lg p-md flex flex-col reveal" style="transition-delay:0.1s">
+          <div class="flex text-brand-orange mb-sm">
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">
+            "Fast, efficient, and reasonably priced. Brought my car in for routine maintenance and brakes. They didn't try to upsell me on unnecessary parts. Highly recommended."
+          </p>
+          <div class="mt-auto border-t border-outline-variant pt-sm">
+            <p class="font-button text-button text-primary">Sara E.</p>
+            <p class="font-label-caps text-label-caps text-on-surface-variant">Toyota Yaris</p>
+          </div>
+        </div>
+
+        <!-- Review 3: Compact (4 cols) -->
+        <div class="review-card md:col-span-4 bg-surface-container-lowest border border-outline-variant rounded-lg p-md flex flex-col reveal" style="transition-delay:0.05s">
+          <div class="flex text-brand-orange mb-sm">
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+            <span class="material-symbols-outlined filled">star</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-md">
+            "The transparency here is unmatched. They showed me exactly what was wrong with the suspension and explained the repair process step-by-step. I'll never go anywhere else."
+          </p>
+          <div class="mt-auto border-t border-outline-variant pt-sm">
+            <p class="font-button text-button text-primary">Youssef M.</p>
+            <p class="font-label-caps text-label-caps text-on-surface-variant">Renault Clio</p>
+          </div>
+        </div>
+
+        <!-- Review 4: Medium (8 cols) -->
+        <div class="review-card md:col-span-8 bg-surface-container-lowest border border-outline-variant rounded-lg p-md flex flex-col md:flex-row gap-lg reveal" style="transition-delay:0.1s">
+          <div class="flex-1">
+            <div class="flex text-brand-orange mb-sm">
+              <span class="material-symbols-outlined filled">star</span>
+              <span class="material-symbols-outlined filled">star</span>
+              <span class="material-symbols-outlined filled">star</span>
+              <span class="material-symbols-outlined filled">star</span>
+              <span class="material-symbols-outlined filled">star</span>
+            </div>
+            <h3 class="font-headline-md text-headline-md text-primary mb-sm">Lifesavers in an Emergency</h3>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              "My car broke down just outside Mohammedia. Garage Hakmaoui arranged a tow, received the car late in the afternoon, and had it running by the next morning. The mechanic even stayed a bit late to ensure everything was perfect. Incredible dedication."
+            </p>
+          </div>
+          <div class="md:w-48 border-t md:border-t-0 md:border-l border-outline-variant pt-md md:pt-0 md:pl-md flex flex-col justify-center shrink-0">
+            <p class="font-button text-button text-primary mb-xs">Fatima B.</p>
+            <p class="font-label-caps text-label-caps text-on-surface-variant mb-sm">Peugeot 208</p>
+            <div class="flex items-center gap-xs text-brand-orange">
+              <span class="material-symbols-outlined text-sm">verified</span>
+              <span class="font-label-caps text-label-caps">VERIFIED</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews CTA -->
+      <div class="mt-xl text-center bg-surface-container border border-outline-variant rounded-xl p-xl reveal">
+        <span class="material-symbols-outlined text-4xl text-primary mb-md block">rate_review</span>
+        <h3 class="font-headline-lg text-headline-lg text-primary mb-sm">Share Your Experience</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-lg max-w-xl mx-auto">
+          Your feedback helps us maintain our high standards of technical precision and customer service. Let us know how we did.
+        </p>
+        <a href="https://g.page/r/review" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-sm bg-primary text-white border border-primary px-lg py-sm font-button text-button hover:bg-transparent hover:text-primary transition-colors rounded">
+          Leave a Review
+          <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-container-max mx-auto px-gutter"><hr class="border-outline-variant/50"/></div>
+
+  <!-- =====================================================
+       SECTION 4: CONTACT
+       ===================================================== -->
+  <section id="contact" class="max-w-container-max mx-auto px-gutter py-xl">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+      <!-- Left: Info -->
+      <div class="md:col-span-5 flex flex-col gap-md reveal">
+        <span class="font-label-caps text-label-caps text-brand-orange uppercase tracking-widest">Get In Touch</span>
+        <h2 class="font-headline-lg text-headline-lg text-primary">Book Your Appointment</h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">
+          Ready to experience Hakmaoui Precision? Fill in the form or reach us directly. We'll get back to you within a few hours.
+        </p>
+
+        <!-- Contact Details -->
+        <div class="flex flex-col gap-md mt-md">
+          <div class="flex items-start gap-md bg-surface-container-lowest border border-outline-variant rounded-lg p-md">
+            <span class="material-symbols-outlined text-brand-orange mt-0.5">location_on</span>
+            <div>
+              <p class="font-button text-button text-primary">Our Location</p>
+              <p class="font-body-md text-body-md text-on-surface-variant">Rue de la Gare, Mohammedia, Morocco</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-md bg-surface-container-lowest border border-outline-variant rounded-lg p-md">
+            <span class="material-symbols-outlined text-brand-orange mt-0.5">schedule</span>
+            <div>
+              <p class="font-button text-button text-primary">Working Hours</p>
+              <p class="font-body-md text-body-md text-on-surface-variant">Mon – Sat: 08:00 – 19:00</p>
+              <p class="font-label-caps text-label-caps text-on-surface-variant mt-1">CLOSED SUNDAYS</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-md bg-surface-container-lowest border border-outline-variant rounded-lg p-md">
+            <span class="material-symbols-outlined text-brand-orange mt-0.5">phone</span>
+            <div>
+              <p class="font-button text-button text-primary">Call Us</p>
+              <a href="tel:+212666299796" class="font-body-md text-body-md text-on-surface-variant hover:text-brand-orange transition-colors">06 66 29 97 96</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="md:col-span-7 reveal" style="transition-delay:0.12s">
+        <form id="contact-form" novalidate class="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg flex flex-col gap-md shadow-sm">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-md">
+            <div class="flex flex-col gap-xs">
+              <label for="full-name" class="field-label">Full Name</label>
+              <input id="full-name" name="full-name" type="text" autocomplete="name"
+                     placeholder="Mohammed Al Fassi" required class="field-input"/>
+            </div>
+            <div class="flex flex-col gap-xs">
+              <label for="phone" class="field-label">Phone Number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel"
+                     placeholder="+212 6 12 34 56 78" required class="field-input"/>
+            </div>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <label for="email" class="field-label">Email Address</label>
+            <input id="email" name="email" type="email" autocomplete="email"
+                   placeholder="you@example.com" class="field-input"/>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <label for="vehicle" class="field-label">Vehicle (Make, Model, Year)</label>
+            <input id="vehicle" name="vehicle" type="text"
+                   placeholder="e.g. Renault Clio, 2019" class="field-input"/>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <label for="service" class="field-label">Service Required</label>
+            <select id="service" name="service" class="field-input">
+              <option value="" disabled selected>— Select a service —</option>
+              <option>General Maintenance</option>
+              <option>Advanced Diagnostics</option>
+              <option>Brake &amp; Suspension</option>
+              <option>Engine Repair</option>
+              <option>Electrical Systems</option>
+              <option>A/C &amp; Heating</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="flex flex-col gap-xs">
+            <label for="message" class="field-label">Additional Details</label>
+            <textarea id="message" name="message" rows="4"
+                      placeholder="Describe the issue or any special requirements…"
+                      class="field-input resize-none"></textarea>
+          </div>
+          <button type="submit" id="submit-btn"
+                  class="bg-brand-orange text-white font-button text-button px-8 py-4 rounded hover:opacity-90 transition-opacity flex items-center justify-center gap-2 group mt-sm">
+            Send Request
+            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </button>
+
+          <!-- Success message (hidden by default) -->
+          <div id="form-success" class="hidden flex items-center gap-sm bg-green-50 border border-green-300 text-green-800 rounded p-md font-body-md text-body-md">
+            <span class="material-symbols-outlined text-green-600">check_circle</span>
+            Thank you! We'll be in touch within a few hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========================================================
+     FOOTER
+     ======================================================== -->
+<footer class="bg-primary-container w-full border-t border-outline-variant">
+  <div class="max-w-container-max mx-auto px-gutter py-lg flex flex-col md:flex-row justify-between items-center gap-md">
+    <div class="flex flex-col items-center md:items-start gap-2">
+      <div class="flex items-center gap-sm">
+        <svg width="28" height="28" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M100 30 L160 65 L160 135 L100 170 L40 135 L40 65 Z"
+                fill="none" stroke="#e2e2e5" stroke-width="12" stroke-linejoin="round"/>
+          <path d="M75 70 L75 130 M125 70 L125 130 M75 100 L125 100"
+                fill="none" stroke="#e45400" stroke-width="10" stroke-linecap="round"/>
+        </svg>
+        <span class="font-headline-md text-headline-md text-surface-container-lowest tracking-tight">Garage Hakmaoui</span>
+      </div>
+      <p class="font-body-md text-body-md text-on-primary-container text-center md:text-left">
+        © 2024 Garage Hakmaoui. Professional Automotive Services in Mohammedia.
+      </p>
+    </div>
+    <nav class="flex flex-wrap justify-center gap-6" aria-label="Footer navigation">
+      <a href="#" class="font-label-caps text-label-caps text-on-primary-container hover:text-surface-bright hover:underline transition-colors uppercase tracking-widest">Privacy Policy</a>
+      <a href="#" class="font-label-caps text-label-caps text-on-primary-container hover:text-surface-bright hover:underline transition-colors uppercase tracking-widest">Terms of Service</a>
+      <a href="#" class="font-label-caps text-label-caps text-on-primary-container hover:text-surface-bright hover:underline transition-colors uppercase tracking-widest">Service Status</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- ========================================================
+     JAVASCRIPT
+     ======================================================== -->
+<script>
+  /* ---- Mobile menu toggle ---- */
+  const toggle   = document.getElementById('mobile-toggle');
+  const menu     = document.getElementById('mobile-menu');
+  const menuIcon = document.getElementById('menu-icon');
+
+  toggle.addEventListener('click', () => {
+    const isOpen = menu.classList.toggle('open');
+    menuIcon.textContent = isOpen ? 'close' : 'menu';
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  // Close mobile menu when a link inside it is clicked
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      menu.classList.remove('open');
+      menuIcon.textContent = 'menu';
+      toggle.setAttribute('aria-expanded', false);
+    });
+  });
+
+  /* ---- Navbar shadow on scroll ---- */
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 10);
+  }, { passive: true });
+
+  /* ---- Active nav link on scroll ---- */
+  const sections  = ['home', 'services', 'reviews', 'contact'];
+  const navLinks  = sections.map(id => document.getElementById('nav-' + id));
+  const sectionEls = sections.map(id => document.getElementById(id));
+
+  function updateActiveLink() {
+    const scrollY = window.scrollY + 100;
+    let current = 0;
+    sectionEls.forEach((el, i) => {
+      if (el && el.offsetTop <= scrollY) current = i;
+    });
+    navLinks.forEach((link, i) => {
+      if (!link) return;
+      link.classList.toggle('active', i === current);
+    });
+  }
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
+
+  /* ---- Scroll-reveal via IntersectionObserver ---- */
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer  = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  /* ---- Counter animation ---- */
+  function animateCounter(el) {
+    const target = parseInt(el.dataset.target, 10);
+    const duration = 1600;
+    const start = performance.now();
+    function step(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(eased * target) + (target >= 99 ? '%' : '+');
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const counterEls = document.querySelectorAll('.stat-number[data-target]');
+  const counterObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        counterObs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counterEls.forEach(el => counterObs.observe(el));
+
+  /* ---- Contact form submit ---- */
+  const form       = document.getElementById('contact-form');
+  const submitBtn  = document.getElementById('submit-btn');
+  const successMsg = document.getElementById('form-success');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // Simple client-side validation
+    const nameEl  = document.getElementById('full-name');
+    const phoneEl = document.getElementById('phone');
+    if (!nameEl.value.trim() || !phoneEl.value.trim()) {
+      nameEl.focus();
+      nameEl.style.borderColor = '#e45400';
+      setTimeout(() => nameEl.style.borderColor = '', 2000);
+      return;
+    }
+
+    // Simulate submission
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-[18px]">refresh</span> Sending…';
+    setTimeout(() => {
+      form.reset();
+      submitBtn.classList.add('hidden');
+      successMsg.classList.remove('hidden');
+    }, 1400);
+  });
+</script>
+</body>
+</html>
